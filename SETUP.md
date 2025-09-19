@@ -1,4 +1,4 @@
-# 🛠 Pre-Workshop Setup Guide  
+# Pre-Workshop Setup Guide  
 **DevOps with Kubernetes (4 Hours, Beginner Friendly)**  
 
 This guide helps you prepare your laptop for the workshop. Follow all steps before the session.  
@@ -13,11 +13,11 @@ This guide helps you prepare your laptop for the workshop. Follow all steps befo
 
 ---
 
-## 🖥️ CPU Architecture (ARM vs AMD/Intel)
+## CPU Architecture (ARM vs AMD/Intel)
 Some laptops (like newer MacBooks with Apple Silicon M1/M2/M3) use **ARM64 architecture**, while most Windows and older macOS/Linux laptops use **AMD64/Intel (x86_64)**.  
 This matters when downloading binaries (like `kubectl`, `kind`) or running Docker images.  
 
-### 🔍 How to Check Your Architecture
+### How to Check Your Architecture
 - **Linux / macOS (Terminal):**
   ```sh
   uname -m
@@ -32,7 +32,7 @@ This matters when downloading binaries (like `kubectl`, `kind`) or running Docke
   - `AMD64` → Intel/AMD  
   - `ARM64` → ARM  
 
-### 📌 Where You Need to Take Care
+### Where You Need to Take Care
 - **kubectl downloads:** Replace `amd64` with `arm64` if on ARM. Example for macOS ARM:
   ```sh
   curl -LO "https://dl.k8s.io/release/v1.31.0/bin/darwin/arm64/kubectl"
@@ -48,7 +48,7 @@ This matters when downloading binaries (like `kubectl`, `kind`) or running Docke
 
 ---
 
-## 🔽 Installations
+## Installations
 
 ### 1. Docker Desktop
 Download and install: https://www.docker.com/products/docker-desktop/  
@@ -199,7 +199,7 @@ k6 version
 
 ---
 
-## 🔍 Final Precheck
+## Final Precheck
 
 > ⚠️ **Make sure Docker Desktop is open and running** before running these checks.
 
@@ -228,7 +228,7 @@ kind delete cluster --name precheck
 
 ---
 
-## 🎉 You’re Ready!
+## You’re Ready!
 Bring your laptop with all tools installed, admin rights (for Docker/Kubernetes), and internet access.  
 We’ll build, deploy, scale, and monitor apps on Kubernetes together 🚀  
 
