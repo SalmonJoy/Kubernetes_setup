@@ -230,6 +230,6 @@ kind delete cluster --name precheck
 
 ## You’re Ready!
 Bring your laptop with all tools installed, admin rights (for Docker/Kubernetes), and internet access.  
-We’ll build, deploy, scale, and monitor apps on Kubernetes together 🚀  
+We’ll build, deploy, scale, and monitor apps on Kubernetes together
 
 ---
