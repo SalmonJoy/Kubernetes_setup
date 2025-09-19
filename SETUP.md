@@ -23,7 +23,7 @@ This matters when downloading binaries (like `kubectl`, `kind`) or running Docke
   uname -m
   ```
   - `x86_64` → AMD/Intel (use amd64 binaries)  
-  - `arm64` or `aarch64` → ARM (use arm64 binaries)  
+  - `arm64` or `aarch64` → Apple Silicon / ARM (use arm64 binaries)  
 
 - **Windows (PowerShell):**
   ```powershell
@@ -56,7 +56,9 @@ After installation, open **PowerShell (Windows)** or **Terminal (macOS/Linux)** 
 ```sh
 docker --version
 ```
-✅ Expected: `Docker version 27.x` or newer (e.g., `28.4.0` works fine).  
+✅ Expected: `Docker version 27.x` or newer (e.g., 28.4.0 is fine).  
+
+> ⚠️ Always ensure **Docker Desktop is opened and running** (look for the 🐳 whale icon in system tray/menu bar) **before running Kubernetes checks**.
 
 ---
 
@@ -113,7 +115,7 @@ Verify:
 ```sh
 kubectl version --client
 ```
-Expected: `v1.31.0` or later  
+✅ Expected: `v1.31.x` or newer (e.g., v1.32.2 is fine).  
 
 ---
 
@@ -132,7 +134,7 @@ Verify:
 ```sh
 kind version
 ```
-Expected: `kind v0.23.0`  
+✅ Expected: `v0.23.x` or newer (e.g., v0.30.0 is fine).  
 
 ---
 
@@ -149,7 +151,7 @@ Verify:
 ```sh
 helm version
 ```
-Expected: `v3.15.x`  
+✅ Expected: `v3.15.x` or newer (e.g., v3.18.6 is fine).  
 
 ---
 
@@ -160,7 +162,7 @@ Verify:
 node -v
 npm -v
 ```
-Expected: `node v20.x`, `npm v10.x`  
+✅ Expected: `node v20.x`, `npm v10.x` (higher versions are fine if LTS).  
 
 ---
 
@@ -170,7 +172,7 @@ Verify:
 ```sh
 git --version
 ```
-Expected: `git version 2.45+`  
+✅ Expected: `git version 2.45+` (higher is fine).  
 
 ---
 
@@ -193,21 +195,24 @@ Verify:
 ```sh
 k6 version
 ```
-Expected: `v0.51.x` or later  
+✅ Expected: `v0.51.x` or newer (e.g., v1.2.2 is fine).  
 
 ---
 
 ## 🔍 Final Precheck
-Run the following to ensure everything works:
+
+> ⚠️ **Make sure Docker Desktop is open and running** before running these checks.
+
 ```sh
 docker run hello-world
 kind create cluster --name precheck
 kubectl get nodes
 kind delete cluster --name precheck
 ```
-Expected:  
+
+**Expected:**  
 - Docker prints `Hello from Docker!`  
-- Kubernetes shows node `kind-control-plane`  
+- Kubernetes shows node `kind-control-plane` with STATUS = Ready  
 
 ---
 
