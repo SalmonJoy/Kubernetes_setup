@@ -137,11 +137,16 @@ helm search repo nginx | Select-Object -First 5
 
 You can remove the test app and the precheck cluster any time:
 
+- **Linux/macOS:**
 ```sh
-# Delete test resources
 kubectl delete deployment/web service/web || true
+kind delete cluster --name precheck
+```
 
-# Delete the cluster
+- **Windows (PowerShell):**
+```powershell
+kubectl delete deployment/web
+kubectl delete service/web
 kind delete cluster --name precheck
 ```
 
