@@ -116,7 +116,17 @@ Verify Helm can reach public chart repos.
 ```sh
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
+```
+
+Now search for nginx charts:  
+
+- **Linux/macOS (bash/zsh):**
+```sh
 helm search repo nginx | head -n 5
+```
+- **Windows (PowerShell):**
+```powershell
+helm search repo nginx | Select-Object -First 5
 ```
 
 **Expected:** A short table of nginx charts is listed (name/version).
@@ -162,4 +172,4 @@ kind delete cluster --name precheck
 4. NGINX page loads at **http://localhost:8080** via port-forward  
 5. (Optional) `helm search repo nginx` returns results
 
-You’re ready for the workshop 🚀
+You’re ready for the workshop
