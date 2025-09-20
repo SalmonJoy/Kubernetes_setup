@@ -1,0 +1,14 @@
+Git
+Github
+Docker
+Kubernetes
+K6
+
+Tech:
+React (Javascript)
+NodeJs
+Postgres
+
+To do:
+Use Cloud (AWS, Azure, GCP)
+Typescript
